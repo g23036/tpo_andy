@@ -1,0 +1,351 @@
+
+
+body {
+	background: linear-gradient(to bottom right, rgba(0, 160, 209, 0.8), rgba(51, 51, 51, 0.5), rgba(5, 145, 226, 0.8));
+	font-size: 80%;
+	color: #060013;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+
+	/* Flexbox */
+	/* display: flex;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 20px;
+}
+
+
+
+.contenedor-datos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+	/* Flexbox */
+	/* width: calc(33.33% - 20px); */
+}
+
+.card .textos {
+	height: 100%;
+	
+	/* Flebox */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	/* Grid */
+	/* display: grid;
+	grid-template-rows: 1fr auto; */
+}
+
+.banner {
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+
+	/* Flexbox */
+	/* width: 30%; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	/* Grid */
+	/* display: grid;
+	grid-template-rows: auto auto auto;
+	align-items: center; */
+}
+
+
+
+
+
+h1 {
+	height:80%;
+	line-height:25%;
+	background:#99CCFF;
+	color:black;
+	text-align:center;
+	margin-top: 0%;
+	left:0;
+	width:100%;
+}
+h2 {
+	color:rgb(3, 0, 32);
+	text-align:center;
+	left:20px;
+	width:100%;
+}
+h3{
+	height:10px;
+	color:rgb(6, 1, 34);
+	text-align:center;
+	left:0;
+	width:80%;
+}
+
+footer {
+	position:absolute;
+	height:50px;
+	line-height:50px;
+	background:#99CCFF;
+	color:black;
+	text-align:center;
+	left:0;
+	width:100%;
+  }
+
+
+  /*Desde acá tenemos la configuracion para las pestañas*/
+.tabs-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .tabs {
+	display: flex;
+  }
+  
+  .tab {
+	padding: 0px;
+	margin: 0 2px;
+	border: line;
+	background-color: transparent;
+	cursor: pointer;
+  }
+  
+  .tab.active {
+	border-bottom: 2px solid whitesmoke;
+  }
+  
+  .tabcontent {
+	display: none;
+	width: 100%;
+	text-align: center;
+  }
+  
+  .tabcontent.active {
+	display: block;
+  }
+  
+  
+  .language-button-container { /* Contenedor para el botón de cambio de idiomas */
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+  }
+  
+  .language-button {
+	padding: 5px;
+	background-color: transparent;
+	border: 5px solid transparent;
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 0.8rem;
+}
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    grid-template-areas:
+      "ubicacion"
+	  "ubicacion"
+     
+  }
+  
+  .ubicacion { grid-area: ubicacion; }
+
+
+  /*configuracion para todo responsive*/
+  
+@media screen and (max-width: 400px) {
+	body {
+		max-width:90%;
+		margin-right: 15%;
+	}
+
+	 /*Desde acá tenemos la configuracion para las pestañas responsive*/
+	 .tabs-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	  
+	  .tabs {
+		display: none;
+	  }
+	  
+	  .tab {
+		padding: 0px;
+		margin: 0 2px;
+		border: line;
+		background-color: transparent;
+		cursor: pointer;
+	  }
+	  
+	  .tab.active {
+		border-bottom: 2px solid whitesmoke;
+	  }
+	  
+	  .tabcontent {
+		display: contents;
+		width: 100%;
+		text-align: center;
+	  }
+	  
+	  .tabcontent.active {
+		display: block;
+	  }
+	.container1 {
+	  grid-template-columns: none;
+	  grid-template-rows: 1fr;
+	  gap: 10px;
+	  grid-template-areas:
+		"ubicacion ubicacion";
+		margin-right: 10%;
+		text-align: center;
+	}
+	.contenedor {
+		width: 90%;
+		margin: auto;
+		padding: 40px 0;
+	
+		/* Flexbox */
+		/* display: flex;
+		gap: 20px; */
+	
+		/* Grid */
+		display: grid;
+		grid-template-columns: none;
+		gap: 20px;
+		margin-right: 10%;
+		text-align: left;
+	}
+	
+	
+	
+	.contenedor-datos {
+		/* Flexbox */
+		/* width: 70%;
+	
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px; */
+	
+		/* Grid */
+		display: grid;
+		grid-template-columns: none;
+		gap: 20px;
+		margin-right: 10%;
+		text-align: left;
+	}
+	
+	.card {
+		border-radius: 10px;
+		min-height: 200px;
+		font-weight: bold;
+		padding: 20px;
+		position: relative;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center center;
+		margin-right: 10%;
+		text-align: left;
+	
+		/* Flexbox */
+		/* width: calc(33.33% - 20px); */
+	}
+	
+	.card .textos {
+		height: 100%;
+		
+		/* Flebox */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-right: 10%;
+		text-align: left;
+	
+		/* Grid */
+		/* display: grid;
+		grid-template-rows: 1fr auto; */
+	}
+	
+	.banner {
+		border-radius: 90%;
+		margin-right: 10%;
+		text-align: left;
+		padding: 5%;
+		background-size: fixed;
+		background-position: fixed;
+	
+		/* Flexbox */
+		/* width: 30%; */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	
+		/* Grid */
+		/* display: grid;
+		grid-template-rows: auto auto auto;
+		align-items: center; */
+	}
+	footer {
+		position:static;
+		height:10%;
+		line-height:60%;
+		margin-right:30%;
+		background:#99CCFF;
+		color:black;
+		text-align:center;
+		left:0;
+		max-width:300px ;
+	
+	  }
+	
+	
+}
+
+  /*configuracion para grande todo responsive*/
+  
+  @media screen and (max-width: 1000px) {
+	body {
+		max-width:90%;
+		margin-right: 15%;
+	}
+}

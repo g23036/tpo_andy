@@ -1,0 +1,42 @@
+form {
+  /* Centrar el formulario en la página */
+  margin: 0 auto;
+  max-height: 20%;
+  width: 80%px;
+  /* Esquema del formulario */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Tamaño y alineación uniforme */
+  display: inline-block;
+  width:25%;
+  text-align: right;
+}
+/* animacion en el titulo h3 para que aparezca desde el borde derecho*/
+h3{
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+@keyframes slidein{
+  from{
+    margin-left: 100%;
+    width: 300%;
+}
+to{
+  margin-left: 0%;
+  width: 100%;
+}
+}
